@@ -417,6 +417,7 @@ function SegmentScreen() {
       } else {
         segDoc.set({
           airline: airline,
+          flightNum: flightNum,
           departureTime: depart,
           startingLocation: start,
           destinationLocation: dest,
