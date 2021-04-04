@@ -403,12 +403,14 @@ function SegmentScreen() {
     var seqNum = 0;
     if (currSegment != undefined) {
       // find max sequenceNum in tripSegments
+      seqNum = currSegment.sequenceNum;
+    } else {
+      // find max sequenceNum in tripSegments
       tripSegments.forEach((item) => {
         if (item.sequenceNum > seqNum)
           seqNum = item.sequenceNum;
       });
-    } else {
-      seqNum = tripSegments.length + 1;
+      seqNum++;
     }
 
     if (icons[0]) { // flight
