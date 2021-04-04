@@ -78,14 +78,14 @@ export const UserProvider = ({ children }) => {
       } else { // Van to Brasilia
         setTripSegment(userID, tripID, "taxi", ["Yellow Cab", "604-681-1111"], "UBC",
                       "YVR", "10:00 AM", "10:16 AM", "", 1)
-        .then(() => setTripSegment(userID, tripID, "flight", ["Air Canada", "AC118"],
-                      "YVR", "YYZ", "2:10 PM", "9:31 PM", "", 2))
-        .then(() => setTripSegment(userID, tripID, "flight", ["Air Canada", "AC90"],
-                      "YYZ", "GRU", "11:55 PM", "11:50 AM", "", 3))
-        .then(() => setTripSegment(userID, tripID, "flight", ["Air Canada", "AC9832"],
-                      "GRU", "BSB", "4:35 PM", "6:25 PM", "", 4))
-        .then(() => setTripSegment(userID, tripID, "taxi", ["Taxi Brasilia", "55 61 98126-5306"], "BSB",
-                      "Pier 21", "7:00 PM", "7:15 PM", "", 5))
+        .then(() => setTripSegment(userID, tripID, "flight", ["Air Canada", "AC128"],
+                      "YVR", "YYZ", "11:45 PM", "7:10 AM", "", 2))
+        .then(() => setTripSegment(userID, tripID, "flight", ["CM Airlines", "CM471"],
+                      "YYZ", "PTY", "10:09 AM", "2:48 PM", "", 3))
+        .then(() => setTripSegment(userID, tripID, "flight", ["CM Airlines", "CM205"],
+                      "PTY", "BSB", "3:32 PM", "11:51 PM", "", 4))
+        .then(() => setTripSegment(userID, tripID, "drive", ["14.6km", "via EPDB"], "BSB",
+                      "Pier 21", "12:30 AM", "12:47 AM", "", 5))
         .then((response) => resolve(response))
         .catch((err) => reject(err));
       }
