@@ -46,13 +46,13 @@ function SegmentScreen() {
 
   // flight states
   const [airline, setAirline] = useState(() => {
-    if (currSegment.airline != undefined)
+    if (currSegment != undefined && currSegment.airline != undefined)
       return currSegment.airline;
     else
       return "Airline";
   });
   const [flightNum, setFlightNum] = useState(() => {
-    if (currSegment.flightNum != undefined)
+    if (currSegment != undefined && currSegment.flightNum != undefined)
       return currSegment.flightNum;
     else
       return "Flight Number";
@@ -68,7 +68,12 @@ function SegmentScreen() {
   const [driveRoute, setDriveRoute] = useState({});
 
   // ferry state
-  const [ferryTime, setFerryTime] = useState("Sailing Time");
+  const [ferryTime, setFerryTime] = useState(() => {
+    if (currSegment != undefined && currSegment.sailingTime != undefined)
+      return currSegment.sailingTime;
+    else
+      return "Sailing Time";
+  });
 
   useEffect(() => {
     isMounted = true;
