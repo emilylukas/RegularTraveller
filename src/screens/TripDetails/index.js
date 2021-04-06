@@ -102,7 +102,7 @@ function TripDetail() {
           <div className="tripInputRow">
             <p style={{marginRight: 30}}>Departure:</p>
             <form onSubmit={e => { e.preventDefault(); }}>
-              <input type="Date"
+              <input type="text"
                      placeholder={departDate}
                      id="departureDate"
                      className="tripInputForm"
